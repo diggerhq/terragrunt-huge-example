@@ -13,3 +13,4 @@ dependency "parent" {
 terraform {
   source = "git::https://github.com/example-huge-tg-modules/svc1.git//?ref=v1.0.0"
 }
+
