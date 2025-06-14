@@ -8,6 +8,7 @@ generate_projects:
 workflows:
   default:
     plan:
+      filter_regex: "((?i)filterme:\\s\"?)[^\"]*"    
       steps:
         - init
         - plan
