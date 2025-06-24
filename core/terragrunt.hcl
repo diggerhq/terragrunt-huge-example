@@ -7,8 +7,8 @@ generate "output" {
   path      = "outputs.tf"
   if_exists = "overwrite"
   contents  = <<EOF
-output "test_output" {
-  value = "filterme: topsecretstuff"
+output "ready" {
+  value = "or not"
   description = "A sample output to demonstrate generation"
 }
 EOF
