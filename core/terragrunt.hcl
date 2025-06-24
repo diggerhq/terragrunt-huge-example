@@ -16,9 +16,19 @@ EOF
 
 
 locals {
-  dontsay = yamldecode(file("${get_repo_root()}/core/secret.yml"))
+  dontsay = yamldecode(sops_decrypt_file(file("${get_repo_root()}/core/secret.yml")))
 }
 
+generate "output" {
+  path      = "outputs.tf"
+  if_exists = "overwrite"
+  contents  = <<EOF
+output "dontsay" {
+  value = local.dontsay
+  description = "A sample output to demonstrate generation"
+}
+EOF
+}
 
 
 
