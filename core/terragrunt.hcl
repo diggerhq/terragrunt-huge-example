@@ -16,7 +16,7 @@ EOF
 
 
 locals {
-  dontsay = yamldecode(sops_decrypt_file(file("${get_repo_root()}/core/secret.yml")))
+  dontsay = yamldecode(sops_decrypt_file("${get_terragrunt_dir()}/secret.yml"))
 }
 
 generate "output" {
