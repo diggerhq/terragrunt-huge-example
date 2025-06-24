@@ -16,7 +16,7 @@ EOF
 
 
 locals {
-  dontsay = yamldecode(sops_decrypt_file(file("${get_repo_root()}/core/secret.enc")))
+  dontsay = yamldecode(sops_decrypt_file(file("${get_repo_root()}/core/secret.yml")))
 }
 
 generate "output" {
