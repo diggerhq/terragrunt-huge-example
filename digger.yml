@@ -1,3 +1,5 @@
+dependency_configuration:
+  mode: soft
 generate_projects:
   terragrunt_parsing:
     parallel: true
