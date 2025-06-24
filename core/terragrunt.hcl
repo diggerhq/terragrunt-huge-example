@@ -14,3 +14,12 @@ output "test_output" {
 EOF
 }
 
+
+locals {
+  dontsay = yamldecode(file("${get_repo_root()}/core/secret.yml"))
+}
+
+
+
+
+
