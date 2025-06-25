@@ -13,4 +13,3 @@ output "test_output" {
 }
 EOF
 }
-
