@@ -12,3 +12,4 @@ workflows:
         - init
         - plan
         - run: echo "Terragrunt generation!"
+
